@@ -101,7 +101,9 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 */
 	public AnnotationConfigApplicationContext(String... basePackages) {
 		this();
+		//$$2.0 register BeanConfig
 		scan(basePackages);
+		//$$2.2 register @Beans in BeanConfig file
 		refresh();
 	}
 
